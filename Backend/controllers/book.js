@@ -19,7 +19,7 @@ export const books = async (req, res) => {
 export const getAllBooks = async (req, res) => {
   try {
     const books = await Book.find({});
-    res.status(200).json({ count: books.length, books });
+    res.status(200).json({ books });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

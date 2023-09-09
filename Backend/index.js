@@ -21,6 +21,10 @@ app.use(
 );
 
 //ROUTES//
+app.get("/", (req, res) => {
+  res.send("Api Running Successfully!");
+});
+
 app.use("/book", bookRoutes);
 
 const PORT = process.env.PORT || 8001;

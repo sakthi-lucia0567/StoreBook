@@ -12,7 +12,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:8000/book/all/${id}`)
+      .get(`https://store-book-gamma.vercel.app/book/all/${id}`)
       .then((res) => {
         setLoading(true);
         console.log("Data That Coming", res.data);

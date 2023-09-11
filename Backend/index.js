@@ -13,7 +13,7 @@ app.use(express.json());
 //MIDDLEWARE for CORS
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://zoro-book-store.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
     credentials: true,

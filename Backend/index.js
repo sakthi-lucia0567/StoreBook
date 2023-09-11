@@ -12,12 +12,20 @@ app.use(express.json());
 
 //MIDDLEWARE for CORS
 app.use(
-  cors({
-    origin: "https://zoro-book-store.vercel.app/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-    credentials: true,
-  })
+  cors(
+    {
+      origin: "https://zoro-book-store.vercel.app",
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type"],
+      credentials: true,
+    },
+    {
+      origin: "https://zoro-book-store-5vvunyeme-sakthivela-0567.vercel.app",
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type"],
+      credentials: true,
+    }
+  )
 );
 
 //ROUTES//
